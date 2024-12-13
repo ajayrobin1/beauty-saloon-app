@@ -31,7 +31,9 @@ export default function Gallery() {
       <div className="w-full md:w-2/3 md:mx-auto grid grid-cols-2 md:grid-cols-4 justify-evenly gap-2 md:gap-4">
         {imageList.map((item, index) => {
           return(
-            <div>
+            <div
+            key={index}
+            >
             <Image
             className="rounded-sm mx-auto h-full w-full object-cover"
             src={item.imgSrc} 

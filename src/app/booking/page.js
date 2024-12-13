@@ -4,7 +4,6 @@ import Button from "../components/Button";
 import Hero from "../components/Hero";
 import Input from "../components/Input";
 import TextArea from "../components/TextArea";
-import validateNumber from "../components/validateNumber";
 
 const services=[
   { 
@@ -61,6 +60,15 @@ export default function Booking() {
   const [serviceId, setServiceId] = useState('')
   const [userMessage, setUserMessage] = useState('')
   const [scheduleId, setScheduleId] = useState('')
+
+  const validateNumber = (inputNumber) => {
+    const number = inputNumber.replace(/ /g,''); 
+    if(number.length === 10){
+        return (number);
+    }
+    else  if((number.length === 12 && number.slice(0,2)=='91')||(number.length === 13 && number.slice(0,3)=='+91')) return(number.slice(-10))
+     return (NaN);
+  }
 
   const msToTime =(duration) => {
     var minutes = parseInt((duration/(1000*60))%60)

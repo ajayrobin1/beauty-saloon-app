@@ -2,7 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import Button from "./components/Button";
 import Card from "./components/Card";
-import ContactForm from "./components/ContactForm";
+// import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   const services=[
@@ -104,7 +104,7 @@ export default function Home() {
    >
       <div className="w-full flex flex-col ml-auto my-8 mr-6 p-6 overflow-hidden bg-white rounded-sm  dark:bg-gray-200 md:w-1/4 shadow-gray-300/50 dark:shadow-black/50">
          <h2 className=" tangerine-bold">Contact Us</h2>
-         <ContactForm />
+         <Button href={'/contact'}>Reach Us</Button>
       </div>
     </div>
     </>

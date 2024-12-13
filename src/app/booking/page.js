@@ -4,6 +4,34 @@ import Button from "../components/Button";
 import Hero from "../components/Hero";
 import Input from "../components/Input";
 import TextArea from "../components/TextArea";
+import validateNumber from "../components/validateNumber";
+
+const services=[
+  { 
+    id:'1',
+    title:'Bridal',
+    path:'/bridal',
+    imgSrc: 'https://plus.unsplash.com/premium_photo-1661456395657-049a92e01522?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  { 
+    id:'2',
+    title:'Face treatment',
+    path:'/face-treatment',
+    imgSrc: 'https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  { 
+    id:'3',
+    title:'Manicure and pedicure',
+    path:'/manicure-pedicure',
+    imgSrc: 'https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  { 
+    id:'4',
+    title:'Hairstyle',
+    path:'/hairstyle',
+    imgSrc: 'https://images.pexels.com/photos/6628700/pexels-photo-6628700.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  }
+]
 
 const scheduleList = [
   {
@@ -30,7 +58,7 @@ export default function Booking() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [number, setNumber] = useState('')
-  const [service, setService] = useState('')
+  const [serviceId, setServiceId] = useState('')
   const [userMessage, setUserMessage] = useState('')
   const [scheduleId, setScheduleId] = useState('')
 
@@ -53,16 +81,23 @@ export default function Booking() {
 
     const handleSubmit = (e) => {
       e.preventDefault()
-      if(name && number && scheduleId){
-        const file = {
-          'name': name,
-          'email': email,
-          'number': number,
-          'service': service,
-          'userMessage': userMessage,
-          'scheduleId': scheduleId
+      if(name && scheduleId){
+        const cleanNumber = validateNumber(number)
+        if(isNaN(cleanNumber)) 
+          console.log("Please eneter a valid number")
+        else
+        {
+          const file = {
+            'name': name.trim(),
+            'email': email.trim(),
+            'number': cleanNumber,
+            'service-id': serviceId,
+            'user-message': userMessage.trim(),
+            'schedule-id': scheduleId
+          }
+          console.log(file)
         }
-        console.log(file)
+
       }
     }
 
@@ -97,16 +132,16 @@ export default function Booking() {
 
     <label htmlFor="service" className="block  pt-2 text-sm text-gray-500 dark:text-gray-600">Service</label>
 
-    <select required={true} onChange={(e) => setService(e.target.value)} defaultValue={"placeholder"} className="block  border-b  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-sm bg-white px-5 py-2.5 text-gray-700 focus:outline-none focus:ring focus:ring-pink-400 focus:ring-opacity-40 dark:border-pink-900 dark:bg-gray-50" >
+    <select required={true} onChange={(e) => setServiceId(e.target.value)} defaultValue={"placeholder"} className="block  border-b  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-sm bg-white px-5 py-2.5 text-gray-700 focus:outline-none focus:ring focus:ring-pink-400 focus:ring-opacity-40 dark:border-pink-900 dark:bg-gray-50" >
     <option disabled={true} value={"placeholder"} hidden={true} className="p-3">
      -- Select a service --
     </option>
-    <option value="bridal" className="p-3">
-      Bridal
-    </option>
-    <option value="hairstyle" className="p-3">
-      Hairstyle
-    </option>
+    { services.map(item => {
+      return(<option value={item.id} key={item.id} className="p-3" >
+        {item.title}
+      </option>)
+    })
+    }
     </select>
     <label htmlFor="booking-date" className="block  pt-2 text-sm text-gray-500 dark:text-gray-600">Booking Date</label>
 

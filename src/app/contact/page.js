@@ -1,7 +1,5 @@
-import Button from "../components/Button";
+import ContactForm from "../components/ContactForm";
 import Hero from "../components/Hero";
-import Input from "../components/Input";
-import TextArea from "../components/TextArea";
 
 
 export default function Contact() {
@@ -15,11 +13,17 @@ export default function Contact() {
       <section className="py-6 bg-gradient-to-br from-gray-100 to-gray-400">
     <div className="container px-6 py-12 mx-auto">
         <div className="md:flex md:items-center md:-mx-6 md:justify-evenly">
+            <div className="mt-8 md:w-1/2 md:mx-6 mx-1">
+                <div
+                    className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm shadow-2xl dark:bg-gray-50 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+                    <h1 className="text-lg font-medium text-gray-700">What do you want to ask</h1>
+                    <ContactForm />
+                </div>
+            </div>
             <div className="md:w-1/4 md:mx-8 pl-2">
                 <h1 className="text-2xl font-semibold text-gray-800 capitalize dark:text-900 md:text-3xl">
                     Contact us for <br /> more info
                 </h1>
-
                 <div className="mt-6 space-y-8 md:mt-8">
                     <p className="flex items-start -mx-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -71,33 +75,6 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className="mt-8 md:w-1/2 md:mx-6 mx-1">
-                <div
-                    className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm shadow-2xl dark:bg-gray-50 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
-                    <h1 className="text-lg font-medium text-gray-700">What do you want to ask</h1>
-
-                    <form className="mt-6">
-                        <div className="flex-1">
-                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-600">Name</label>
-                            <Input type="text" placeholder="Your Name"  />
-                        </div>
-
-                        <div className="flex-1 mt-6">
-                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-600">Number</label>
-                            <Input type="text" placeholder="Your Number" />
-                        </div>
-
-                        <div className="w-full mt-6">
-                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-600">Message</label>
-                            <TextArea required={true} placeholder="Your Message.."  />
-                        </div>
-                        <Button className="w-full mt-4">
-                            get in touch
-                        </Button>
-
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 </section>

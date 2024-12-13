@@ -27,11 +27,21 @@ body {
   padding: 8px 0;
 }
 
-.hero> h2{
+.tangerine-regular, .hero> h2{
+  font-family: "Tangerine", cursive;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.tangerine-bold{
   font-family: "Tangerine", cursive;
   font-weight: 700;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.hero> h2{
   user-select: none;
 }
 

@@ -9,6 +9,5 @@ export default function Services() {
         </h2>
       </Hero>
       </>
-  
     );
   }

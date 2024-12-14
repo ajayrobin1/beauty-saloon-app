@@ -5,9 +5,9 @@ export default function Hero({children, imgSrc}) {
     style={{
       backgroundImage:`linear-gradient(to top, 
       rgba(0,0,0,0.9),
-      rgba(0,0,0,0.3),
-      rgba(0,0,0,0), 
-      rgba(0,0,0,0.3), 
+      rgba(0,0,0,0.4),
+      rgba(0,0,0,0.1), 
+      rgba(0,0,0,0.4), 
       rgba(0,0,0,0.9)
       
       ), url('${imgSrc}')`,

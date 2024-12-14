@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Card({imgSrc, title, id}) {
     return ( 
-  <div key={id} className="border border-gray-400 flex flex-col items-center justify-center w-full max-w-sm mx-auto rounded-sm shadow-md">
+  <div key={id} className="border border-gray-400 flex flex-col items-center justify-center w-full max-w-sm mx-auto rounded-sm">
     <div className="relative w-full h-64 bg-gray-300 bg-center bg-cover" style={{'backgroundImage': `url(${imgSrc})`}}>
     <Link className="block w-full h-full bg-dark"
     href={`/services/${encodeURIComponent(title.toLowerCase())}`} >

@@ -51,3 +51,10 @@ select:invalid { color: rgb(190, 190, 190); }
 .hero-container{
 height: 50vh;
 }
+
+.react-select__control{
+  border: none !important;
+  margin: 0px !important;
+  box-shadow: none  !important;
+  background: none !important;
+}

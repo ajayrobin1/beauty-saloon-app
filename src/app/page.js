@@ -48,19 +48,19 @@ export default function Home() {
         </div>
         <div className="p-auto md:mr-8">
           <Image src="https://plus.unsplash.com/premium_photo-1675253183563-7c5efc9f99af?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          width={200}
-          height={200}
+          width={180}
+          height={240}
           alt={"about us"}
           style={{objectFit:'cover',
             position:'relative',
             zIndex:10,
             transform:'translate(25%, 25%)'
           }}
-          className="border-pink-800 border-2 shadow-2xl"
+          className="border-pink-800 border-2"
           />
           <Image src="https://images.unsplash.com/photo-1733697184692-efd62759118e?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          width={200}
-          height={200}
+          width={180}
+          height={240}
           alt={"about us"}
           style={{objectFit:'cover',
             zIndex:20,
@@ -69,7 +69,7 @@ export default function Home() {
             left: '-50%',
             transform:'translate(25%,-25%)'
           }}
-          className="border-pink-800 border-2 shadow-2xl	"
+          className="border-pink-800 border-2"
           />
           </div>        
     </div>
@@ -98,7 +98,7 @@ export default function Home() {
       }}
    
    >
-      <div className="w-full flex flex-col ml-auto my-8 mr-6 p-6 overflow-hidden bg-white rounded-sm  dark:bg-gray-50 md:w-1/4 shadow-gray-300/50 dark:shadow-black/50">
+      <div className="w-full flex flex-col ml-auto my-8 mr-6 p-6 overflow-hidden bg-white rounded-sm  dark:bg-gray-50 md:w-1/4">
          <h2 className=" tangerine-bold">Contact Us</h2>
          <ContactForm />
       </div>

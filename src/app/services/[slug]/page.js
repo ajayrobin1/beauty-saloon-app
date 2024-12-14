@@ -41,8 +41,14 @@ export default async function Page({ params }) {
         <Hero imgSrc={file.imgSrc}>
             <h2 className="capitalize">{file.title}</h2>
         </Hero>  
-        <div className="p-6 py-8">
-            <p>{file.description}</p>    
+        <div className="container mx-auto md:w-1/2 p-6 py-8">
+        <div className="py-4">
+            <p>{file.description}</p> 
+        </div>
+
+            <div>
+                <h2 className="text-2xl text-center">Gallery</h2>   
+            </div>
         </div>
       </>
   ) 

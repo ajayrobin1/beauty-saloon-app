@@ -35,7 +35,7 @@ export default function ContactForm() {
 
     return (
         <>
-                <form className="mt-6 text-left" onSubmit={handleSubmit}>
+                <form className="text-left" onSubmit={handleSubmit}>
                         <div className="flex-1">
                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-600">Name</label>
                             <Input type="text" placeholder="Your Name" 

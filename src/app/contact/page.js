@@ -11,18 +11,18 @@ export default function Contact() {
         </h2>
       </Hero>
       <section className="py-6 bg-gradient-to-br from-gray-100 to-gray-400">
-    <div className="container px-6 py-12 mx-auto">
-        <div className="md:flex md:items-center md:-mx-6 md:justify-evenly">
-            <div className="mt-8 md:w-1/2 md:mx-6 mx-1">
-                <div
-                    className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm shadow-2xl dark:bg-gray-50 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+    <div className="container p-6 mx-auto">
+        <div className="md:flex  md:-mx-6 md:justify-evenly">
+            <div className="md:w-1/2 mx-1">
+                <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm shadow-sm dark:bg-gray-50 lg:max-w-xl shadow-gray-300/50 dark:shadow-gray-300/50">
                     <h1 className="text-lg font-medium text-gray-700">What do you want to ask</h1>
                     <ContactForm />
                 </div>
             </div>
-            <div className="md:w-1/4 md:mx-8 pl-2">
-                <h1 className="text-2xl font-semibold text-gray-800 capitalize dark:text-900 md:text-3xl">
-                    Contact us for <br /> more info
+            <div className="mt-10 md:mt-0 md:w-1/2 mx-1">
+            <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm shadow-sm dark:bg-gray-50 lg:max-w-xl shadow-gray-300/50 dark:shadow-gray-300/50">
+                <h1 className="text-2xl font-semibold text-gray-800 dark:text-900 md:text-xl">
+                    Contact us for more info
                 </h1>
                 <div className="mt-6 space-y-8 md:mt-8">
                     <p className="flex items-start -mx-2">
@@ -72,6 +72,7 @@ export default function Contact() {
                             </svg>
                         </a>
                     </div>
+                </div>
                 </div>
             </div>
 

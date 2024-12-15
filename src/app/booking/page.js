@@ -231,10 +231,10 @@ const handleSubmit = (e) => {
                       data-end={item.endTime}
                       name={item.id} value={item.id} className="hidden peer" disabled={!item.available} />
                       <label htmlFor={item.id} className={`w-100 rounded-sm duration-300 p-2 ${item.available?'cursor-pointer hover:bg-gray-200':'cursor-not-allowed'} block border border-gray-500 peer-checked:bg-gray-200 peer-checked:border-2 peer-checked:cursor-default peer-checked:border-green-500`}>                           
-                        <h3 className="p-1 text-sm font-semibold text-gray-800 dark:text-black">
+                        <p className="p-1 text-sm font-semibold text-gray-800 dark:text-black">
                           {msToTime(item.startTime)} - {msToTime(item.endTime)}    
                           <span className={`mx-4 p-1 px-3 text-xs text-gray-800 uppercase bg-blue-200 rounded-full ${item.available?(schedule.id === item.id)?'dark:bg-green-300':'dark:bg-blue-300':'dark:bg-gray-300'} dark:text-gray-800`}>{item.available?(schedule.id === item.id)?'Selected':'Available':'Booked'}</span>
-                        </h3>
+                        </p>
                         <p className="text-left p-1 text-black">
                           {new Date(bookingDate).toDateString()}
                         </p>

@@ -9,22 +9,32 @@ export default function Home() {
     { 
       id:'1',
       title:'Bridal',
-      imgSrc: 'https://plus.unsplash.com/premium_photo-1661456395657-049a92e01522?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      imgSrc: '/Bride',
     },
     { 
       id:'2',
       title:'Face Treatment',
-      imgSrc: 'https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      imgSrc: '/FacialMask',
     },
     { 
       id:'3',
-      title:'Manicure and Pedicure',
-      imgSrc: 'https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title:'Manicure',
+      imgSrc: '/NailPolish',
     },
     { 
       id:'4',
+      title:'Pedicure',
+      imgSrc: '/FootMassage',
+    },
+    { 
+      id:'5',
       title:'Hairstyle',
-      imgSrc: 'https://images.pexels.com/photos/6628700/pexels-photo-6628700.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      imgSrc: '/ManHiar',
+    },
+    { 
+      id:'6',
+      title:'Hair Colouring',
+      imgSrc: '/HairDye',
     }
   ]
   return ( 
@@ -74,7 +84,7 @@ export default function Home() {
           </div>        
     </div>
       <h2 className="tangerine-bold text-black text-center p-2">Our Services</h2>
-      <div className="flex flex-col md:flex-row justify-center px-4 md:p-2  w-full md:w-5/6 md:mx-auto gap-y-6 md:gap-x-6 mb-4">
+      <div className="flex flex-col gap-2 md:justify-center md:flex-row md:w-3/4 mx-auto  px-4 md:p-2 w-full mb-4">
         {services.splice(0,4).map((item, i) => {
           return(
             <Card imgSrc={item.imgSrc} title={item.title} key={i} id={i} />
@@ -83,7 +93,7 @@ export default function Home() {
         }
 
       </div>
-      <Button className={'ml-2 mr-auto md:mx-auto'} href={'/services'}>
+      <Button className={' mx-auto md:mx-auto'} href={'/services'}>
       More
       </Button>
 

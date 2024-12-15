@@ -1,27 +1,37 @@
 import Card from "../components/Card";
 import Hero from "../components/Hero";
 const services=[
-    { 
-      id:'1',
-      title:'Bridal',
-      imgSrc: 'https://plus.unsplash.com/premium_photo-1661456395657-049a92e01522?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    { 
-      id:'2',
-      title:'Face treatment',
-      imgSrc: 'https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    { 
-      id:'3',
-      title:'Manicure and pedicure',
-      imgSrc: 'https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    { 
-      id:'4',
-      title:'Hairstyle',
-      imgSrc: 'https://images.pexels.com/photos/6628700/pexels-photo-6628700.jpeg?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    }
-  ]
+  { 
+    id:'1',
+    title:'Bridal',
+    imgSrc: '/Bride',
+  },
+  { 
+    id:'2',
+    title:'Face Treatment',
+    imgSrc: '/FacialMask',
+  },
+  { 
+    id:'3',
+    title:'Manicure',
+    imgSrc: '/NailPolish',
+  },
+  { 
+    id:'4',
+    title:'Pedicure',
+    imgSrc: '/FootMassage',
+  },
+  { 
+    id:'5',
+    title:'Hairstyle',
+    imgSrc: '/ManHair',
+  },
+  { 
+    id:'6',
+    title:'Hair Colouring',
+    imgSrc: '/HairDye',
+  }
+]
 
 export default function Services() {
     return ( 

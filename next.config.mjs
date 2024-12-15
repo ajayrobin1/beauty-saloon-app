@@ -1,14 +1,24 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js'
+        }
+      }
+    }
+  },
+
   reactStrictMode: true, 
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
-        // You can add these as well
-        // port: '',
-        // pathname: 'arifscloud/image/upload/**',
+
       },
     ],
   },

@@ -37,12 +37,17 @@ import { collection, getDocs } from "firebase/firestore";
 // ]
 
 export default async function Services() {
-  const querySnapshot = await getDocs(collection(db, "services"));
-  let services = [];
-  querySnapshot.forEach((doc) => {
-    // console.log(doc)
+  try {
+    
+    const querySnapshot = await getDocs(collection(db, "services"));
+    let services = [];
+    querySnapshot.forEach((doc) => {
     services.push({ id: doc.id, ...doc.data() });
   });
+
+  } catch (error) {
+    console.log(error)
+  }
     return ( 
       <>
         <Hero imgSrc={'https://images.pexels.com/photos/6954771/pexels-photo-6954771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}>

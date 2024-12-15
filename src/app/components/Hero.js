@@ -1,23 +1,16 @@
 export default function Hero({children, imgSrc}) {
   return ( 
     <>
-    <div className="relative hero-container md:h-screen" 
+    <div className={`relative hero-container md:h-screen`}
     style={{
-      backgroundImage:`linear-gradient(to top, 
-      rgba(0,0,0,0.9),
-      rgba(0,0,0,0.4),
-      rgba(0,0,0,0.1), 
-      rgba(0,0,0,0.4), 
-      rgba(0,0,0,0.9)
-      
-      ), url('${imgSrc}')`,
+      background: '#f0f0f0',     
+      backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.2) 50%,  rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.95) 100%), url('${imgSrc}')`,
         width:'100%',
-        backgroundColor:"black",
         backgroundPosition:'center',
         backgroundSize:'cover',
     }}
     >
-        <div className="hero w-full text-center absolute" style={{
+        <div className="hero w-full text-center absolute pl-3" style={{
             top: '100%',
             left: '50%',
             msTransform: 'translate(-50%, -100%)',

@@ -1,15 +1,18 @@
 import Link from "next/link";
 
 export default function Button({children, className, onClick, type, href, disabled}) {
+
+    const styleClass = className +
+    " max-w-fit select-none my-3 px-4 py-2 tracking-wide text-white uppercase transition-colors duration-300 transform grad-bg rounded-sm focus:outline-none focus:ring focus:ring-pink-300 focus:ring-opacity-80";
     if(href)
         return(
-            <Link href={href} type={type} className={className + " mx-auto block max-w-fit select-none my-3 px-6 py-3 font-medium tracking-wide text-white uppercase transition-colors duration-300 transform bg-pink-800 rounded-sm hover:bg-pink-800 focus:outline-none focus:ring focus:ring-pink-300 focus:ring-opacity-80"}>
+            <Link href={href} type={type} className={"block "+styleClass}>
                 {children}
             </Link>
     )
     else
     return ( 
-        <button disabled={disabled} onClick={onClick} type={type} className={className + " select-none my-3 px-6 py-3 font-medium tracking-wide text-white uppercase transition-colors duration-300 transform bg-pink-800 rounded-sm hover:bg-pink-800 focus:outline-none focus:ring focus:ring-pink-300 focus:ring-opacity-80"}>
+        <button disabled={disabled} onClick={onClick} type={type} className={styleClass}>
             {children}
         </button>
     

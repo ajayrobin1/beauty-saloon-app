@@ -197,6 +197,7 @@ const handleSubmit = (e) => {
                 isMulti={true}
                 classNamePrefix="react-select"
                 className="text-black border py-2 border-pink-800"
+                menuPlacement="top"
               />
 
               <label htmlFor="Description" className="block pt-2 text-sm text-gray-500 dark:text-gray-600">Message (optional)</label>

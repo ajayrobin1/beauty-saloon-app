@@ -30,17 +30,17 @@ export default function Home() {
   return ( 
     <>
     <Hero imgSrc="https://plus.unsplash.com/premium_photo-1679750866620-052dbd39d469?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-      <Button href="/booking">Book An Appointment</Button>
-    <h2 className="text-white mt-8">
+      <Button className={"shadow-xl shadow-gray-900/50 md:mx-auto mb-6"} href="/booking">Book An Appointment</Button>
+    <h2 className="text-white text-left md:text-center">
        Unleash Your Inner Beauty
     </h2>
     </Hero>
     
-    <div className="text-center pb-4">
-      <div className="bg-gradient-to-tl from-gray-400 to-gray-50 text-black flex flex-col md:flex-row justify-evenly items-center">
+    <div className="text-center pb-4 bg-gradient-to-tl from-gray-100 to-gray-50">
+      <div className="text-black flex flex-col md:flex-row justify-evenly items-center">
 
           <div className="w-full p-4 md:w-1/2 text-left md:ml-6">
-            <h2 className="text-center tangerine-bold">About Us</h2>
+            <h2 className="text-center tangerine-regular">About Us</h2>
            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
            <div className="pt-6">
            <Button>View Gallery</Button>
@@ -73,7 +73,7 @@ export default function Home() {
           />
           </div>        
     </div>
-      <h2 className="tangerine-bold text-center p-2">Our Services</h2>
+      <h2 className="tangerine-bold text-black text-center p-2">Our Services</h2>
       <div className="flex flex-col md:flex-row justify-center px-4 md:p-2  w-full md:w-5/6 md:mx-auto gap-y-6 md:gap-x-6 mb-4">
         {services.splice(0,4).map((item, i) => {
           return(
@@ -83,7 +83,7 @@ export default function Home() {
         }
 
       </div>
-      <Button href={'/services'}>
+      <Button className={'ml-2 mr-auto md:mx-auto'} href={'/services'}>
       More
       </Button>
 
@@ -98,7 +98,7 @@ export default function Home() {
       }}
    
    >
-      <div className="w-full flex flex-col ml-auto my-8 mr-6 p-6 overflow-hidden bg-white rounded-sm  dark:bg-gray-50 md:w-1/4">
+      <div className="w-full flex flex-col ml-auto my-8 mr-2 p-6 overflow-hidden bg-white rounded-sm  dark:bg-gray-50 md:w-1/4">
          <h2 className=" tangerine-bold">Contact Us</h2>
          <ContactForm />
       </div>

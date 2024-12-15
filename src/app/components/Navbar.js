@@ -33,10 +33,10 @@ export default function Navbar() {
 
 
   return ( 
-    <nav x-data="{ isOpen: false }" className={`fixed z-50 transition-colors duration-300 transform w-full top-0 bg-${(open || scrollPosition > 0 )?'black shadow-lg':'none'} dark:bg-${(open || scrollPosition > 0 )?'gray-900 shadow-lg':'none'}`}>
-    <div className="container px-3 py-4 mx-auto md:flex md:justify-evenly md:items-center">
+    <nav x-data="{ isOpen: false }" className={`fixed z-50 transition-all duration-300 transform w-full top-0 ${(open || scrollPosition > 0 )?' bg-black shadow-sm':' bg-none'} ${(open || scrollPosition > 0 )?'dark:bg-black shadow-md shadow-gray-900':'dark:bg-none'}`}>
+    <div className="container px-3 py-2 mx-auto md:flex md:justify-evenly md:items-center">
         <div className="flex items-center justify-between">
-            <Link href="/" className="text-xs tangerine-bold grow drop-shadow">
+            <Link href="/" className="font-boldtext-xl grad-text">
                 LOGO
             </Link>
 

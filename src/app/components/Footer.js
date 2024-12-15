@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="lg:flex">
             <div className="w-full -mx-6 lg:w-2/5">
                 <div className="px-6">
-                    <Link href="/">
+                    <p className="grad-text">
                         LOGO
-                    </Link>
+                    </p>
 
                     <p className="max-w-sm mt-2 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
 
@@ -51,7 +51,7 @@ export default function Footer() {
             <div className="mt-6 lg:mt-0 lg:flex-1">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <div>
-                        <h3 className="text-gray-700 uppercase dark:text-white">Links</h3>
+                        <h6 className="text-gray-700 uppercase dark:text-white">Links</h6>
                         <Link href="/" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Home</Link>
                         <Link href="/booking" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Booking</Link>
                         <Link href="/gallery" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Gallery</Link>
@@ -59,21 +59,21 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-gray-700 uppercase dark:text-white">External</h3>
+                        <h6 className="text-gray-700 uppercase dark:text-white">External</h6>
                         <Link href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">WhatsApp</Link>
                         <Link href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Instagram</Link>
                         <Link href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Facebook</Link>
                     </div>
 
                     <div>
-                        <h3 className="text-gray-700 uppercase dark:text-white">Services</h3>
+                        <h6 className="text-gray-700 uppercase dark:text-white">Services</h6>
                         <Link href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Bridal Makeup</Link>
                         <Link href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Hairstyles</Link>
                         <Link href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Manicure and Pedicure</Link>
                     </div>
 
                     <div>
-                        <h3 className="text-gray-700 uppercase dark:text-white">Contact</h3>
+                        <h6 className="text-gray-700 uppercase dark:text-white">Contact</h6>
                         <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
                         <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
                     </div>

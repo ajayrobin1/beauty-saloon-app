@@ -2,7 +2,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Tangerine } from 'next/font/google';
+import { Tangerine, Merienda, Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+  weight: ['400', '700']
+});
 
 const tangerine = Tangerine({
   subsets: ['latin'],
@@ -11,15 +18,17 @@ const tangerine = Tangerine({
   weight: ['400', '700']
 });
 
+const merienda = Merienda({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-merienda',
+  weight: ['400', '900']
+});
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
   weight: "100 900",
 });
 
@@ -32,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${tangerine.variable}  antialiased bg-gray-900`}
+        className={`${geistSans.variable} ${roboto.variable} ${tangerine.variable} ${merienda.var}  antialiased bg-gray-900`}
       >
         <Navbar />
         {children}

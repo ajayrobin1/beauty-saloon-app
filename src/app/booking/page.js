@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import Button from "../components/Button";
-import Hero from "../components/Hero";
-import Input from "../components/Input";
-import TextArea from "../components/TextArea";
+import Button from "@/app/components/Button";
+import Hero from "@/app/components/Hero";
+import Input from "@/app/components/Input";
+import TextArea from "@/app/components/TextArea";
 
 import Select from "react-select";
 
@@ -196,7 +196,7 @@ const handleSubmit = (e) => {
                 required={true}
                 isMulti={true}
                 classNamePrefix="react-select"
-                className="text-black border py-2 border-pink-800"
+                className="text-black border p-2  border-pink-800"
                 menuPlacement="top"
               />
 
@@ -230,7 +230,7 @@ const handleSubmit = (e) => {
                       data-start={item.startTime} 
                       data-end={item.endTime}
                       name={item.id} value={item.id} className="hidden peer" disabled={!item.available} />
-                      <label htmlFor={item.id} className={`w-100 rounded-sm duration-300 p-2 ${item.available?'cursor-pointer hover:bg-gray-200':'cursor-not-allowed'} block border border-gray-500 peer-checked:bg-gray-200 peer-checked:border-2 peer-checked:cursor-default peer-checked:border-green-500`}>                           
+                      <label htmlFor={item.id} className={`px-4 w-100 rounded-sm duration-300 p-2 ${item.available?'cursor-pointer hover:bg-gray-200':'cursor-not-allowed'} block border border-gray-500 peer-checked:bg-gray-200 peer-checked:border-2 peer-checked:cursor-default peer-checked:border-green-500`}>                           
                         <p className="p-1 text-sm font-semibold text-gray-800 dark:text-black">
                           {msToTime(item.startTime)} - {msToTime(item.endTime)}    
                           <span className={`mx-4 p-1 px-3 text-xs text-gray-800 uppercase bg-blue-200 rounded-full ${item.available?(schedule.id === item.id)?'dark:bg-green-300':'dark:bg-blue-300':'dark:bg-gray-300'} dark:text-gray-800`}>{item.available?(schedule.id === item.id)?'Selected':'Available':'Booked'}</span>

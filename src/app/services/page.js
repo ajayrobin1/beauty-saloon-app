@@ -37,10 +37,9 @@ import { collection, getDocs } from "firebase/firestore";
 // ]
 
 export default async function Services() {
+  let services = [];
   try {
-    
     const querySnapshot = await getDocs(collection(db, "services"));
-    let services = [];
     querySnapshot.forEach((doc) => {
     services.push({ id: doc.id, ...doc.data() });
   });

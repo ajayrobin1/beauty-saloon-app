@@ -52,7 +52,7 @@ export default async function Services() {
       </Hero>
       <div className="bg-white p-6">
             <div className="flex flex-col md:flex-row justify-center p-4 w-full md:w-5/6 md:mx-auto gap-y-6 md:gap-x-2 mb-4">
-              {services?.map((item, i) => {
+              {services.map((item, i) => {
                   return(
                       <Card imgSrc={item.iconPath} title={item.title} key={i} id={i} />
                     )

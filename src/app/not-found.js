@@ -1,5 +1,5 @@
-import BackButton from "./components/BackButton";
-import Button from "./components/Button";
+import BackButton from "@/app/components/BackButton";
+import Button from "@/app/components/Button";
 
 export default function Custom404() {
     return (<>
@@ -13,7 +13,6 @@ export default function Custom404() {
             </p>
             <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">Page not found</h1>
             <p className="mt-4 text-gray-500 dark:text-gray-400">The page you are looking for doesn&apos;t exist. Here are some helpful links:</p>
-
             <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
                 <BackButton />
                 <Button href={'/'} className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-pink-800 rounded-sm shrink-0 sm:w-auto hover:bg-pink-600 dark:hover:bg-pink-500 dark:bg-pink-800">

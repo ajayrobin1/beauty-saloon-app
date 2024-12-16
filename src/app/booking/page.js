@@ -284,7 +284,7 @@ const handleSubmit = async (e) => {
                       data-start={item.startTime} 
                       data-end={item.endTime}
                       name={item.id} value={item.id} className="hidden peer" disabled={item.isBooked} />
-                      <label htmlFor={item.id} className={`px-4 w-100 rounded-sm duration-300 p-2 ${item.isBooked?'cursor-pointer hover:bg-gray-200':'cursor-not-allowed'} block border border-gray-500 peer-checked:bg-gray-200 peer-checked:border-2 peer-checked:cursor-default peer-checked:border-green-500`}>                           
+                      <label htmlFor={item.id} className={`px-4 w-100 rounded-sm duration-300 p-2 ${item.isBooked?'cursor-not-allowed':'cursor-pointer hover:bg-gray-200'} block border border-gray-500 peer-checked:bg-gray-200 peer-checked:border-2 peer-checked:cursor-default peer-checked:border-green-500`}>                           
                         <p className="p-1 text-sm font-semibold text-gray-800 dark:text-black">
                           {msToTime(item.startTime)} - {msToTime(item.endTime)}    
                           <span className={`mx-4 p-1 px-3 text-xs text-gray-800 uppercase bg-blue-200 rounded-full ${item.isBooked?'dark:bg-gray-300':(schedule.id === item.id)?'dark:bg-green-300':'dark:bg-blue-300'} dark:text-gray-800`}>{item.isBooked?'Booked':(schedule.id === item.id)?'Selected':'Available'}</span>

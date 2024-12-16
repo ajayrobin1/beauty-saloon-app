@@ -58,9 +58,9 @@ export default function Navbar() {
         </div>
 
         {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
-        <div className={`absolute inset-x-0 z-10 w-full p-3 px-6 mt-4 transition-all duration-300 ease-in-out dark:bg-${open?'gray-900':'none'} md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${open?'opacity-100 -translate-x-none': 'opacity-0 translate-x-full'}`}>
+        <div className={`absolute inset-x-0 z-10 w-full p-3 px-6 mt-2 transition-all duration-300 ease-in-out dark:bg-${open?'black':'none'} md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${open?'opacity-100 -translate-x-none': 'opacity-0 translate-x-full'}`}>
             <div className="flex flex-col md:flex-row md:mx-6">
-                <Link className={`my-2 transition-colors duration-300 transform ${pathname=='/'?'border-b-2 border-pink-900':'border-none'} text-gray-50 md:mx-4 md:my-0 uppercase`} href="/">Home</Link>
+                <Link  className={`my-2 transition-colors duration-300 transform ${pathname=='/'?'border-b-2 border-pink-900':'border-none'} text-gray-50 md:mx-4 md:my-0 uppercase`} href="/">Home</Link>
                 <Link className={`my-2 transition-colors duration-300 transform ${pathname=='/booking'?'border-b-2 border-pink-900':'border-none'} text-gray-50 md:mx-4 md:my-0 uppercase`} href="/booking">Booking</Link>
                 <Link className={`my-2 transition-colors duration-300 transform ${pathname=='/services'?'border-b-2 border-pink-900':'border-none'} text-gray-50 md:mx-4 md:my-0 uppercase`} href="/services">Services</Link>
                 <Link className={`my-2 transition-colors duration-300 transform ${pathname=='/gallery'?'border-b-2 border-pink-900':'border-none'} text-gray-50 md:mx-4 md:my-0 uppercase`} href="/gallery">Gallery</Link>

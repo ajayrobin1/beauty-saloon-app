@@ -11,16 +11,16 @@ export default function Contact() {
         </h2>
       </Hero>
       <section className="py-6 bg-gradient-to-br from-gray-100 to-gray-400">
-    <div className="container p-6 mx-auto">
+    <div className="px-2 mx-auto">
         <div className="md:flex  md:-mx-6 md:justify-evenly">
             <div className="md:w-1/2 mx-1">
-                <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm dark:bg-gray-50 lg:max-w-xl">
-                    <h1 className="text-lg font-medium text-gray-700">What do you want to ask</h1>
+                <div className="w-full px-4 py-10 mx-auto overflow-hidden bg-white rounded-sm dark:bg-gray-50 lg:max-w-xl">
+                    <p className="text-lg font-medium text-gray-700">What do you want to ask</p>
                     <ContactForm />
                 </div>
             </div>
             <div className="mt-10 md:mt-0 md:w-1/2 mx-1">
-            <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-sm dark:bg-gray-50 lg:max-w-xl">
+            <div className="w-full px-4 py-10 mx-auto overflow-hidden bg-white rounded-sm dark:bg-gray-50 lg:max-w-xl">
                 <h1 className="text-2xl font-semibold text-gray-800 dark:text-900 md:text-xl">
                     Contact us for more info
                 </h1>

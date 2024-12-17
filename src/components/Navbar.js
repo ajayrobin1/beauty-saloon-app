@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
         <div className={`absolute flex flex-row right-0 w-full mt-2 transition-all duration-300 ease-in-out md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${open?'opacity-100 -translate-x-none': 'opacity-0 translate-x-full'}`}>
             
-            <button className={`md:hidden bg-gray-900/50 block w-1/2 h-screen backdrop-blur-sm md:-translate-x-0 ${open?'opacity-100 translate-x-none': 'opacity-0 -translate-x-full'}`} onClick={toggleMenu}>
+            <button className={`md:hidden bg-gray-900/50 block w-1/2 h-screen backdrop-blur-sm`} onClick={toggleMenu}>
             <span className='hidden'>Close</span>
             </button>
             <div className={`ml-auto md:w-full w-1/2 dark:bg-${open?'black':'none'} md:bg-none h-screen md:h-auto`}>

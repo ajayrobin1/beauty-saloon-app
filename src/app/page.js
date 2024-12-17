@@ -3,40 +3,11 @@ import Hero from "@/components/Hero";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import ContactForm from "@/components/ContactForm";
+import { getServices } from "@/functions/fetchData";
 
-export default function Home() {
-  const services=[
-    { 
-      id:'1',
-      title:'Bridal',
-      imgSrc: '/Bride',
-    },
-    { 
-      id:'2',
-      title:'Face Treatment',
-      imgSrc: '/FacialMask',
-    },
-    { 
-      id:'3',
-      title:'Manicure',
-      imgSrc: '/NailPolish',
-    },
-    { 
-      id:'4',
-      title:'Pedicure',
-      imgSrc: '/FootMassage',
-    },
-    { 
-      id:'5',
-      title:'Hairstyle',
-      imgSrc: '/ManHiar',
-    },
-    { 
-      id:'6',
-      title:'Hair Colouring',
-      imgSrc: '/HairDye',
-    }
-  ]
+export default async function Home() {
+  const services = await getServices(4);
+
   return ( 
     <>
     <Hero imgSrc="https://plus.unsplash.com/premium_photo-1679750866620-052dbd39d469?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
@@ -85,9 +56,9 @@ export default function Home() {
     </div>
       <h2 className="tangerine-bold text-black text-center p-2">Our Services</h2>
       <div className="flex flex-col gap-2 md:justify-center md:flex-row md:w-3/4 mx-auto  px-4 md:p-2 w-full mb-4">
-        {services.splice(0,4).map((item, i) => {
+        {services.map((item, i) => {
           return(
-            <Card imgSrc={item.imgSrc} title={item.title} key={i} id={i} />
+            <Card iconPath={item.iconPath} title={item.title} key={i} id={item.id} path={item.path} />
           )
         })
         }

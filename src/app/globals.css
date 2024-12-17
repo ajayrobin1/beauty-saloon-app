@@ -62,8 +62,20 @@ color: #ffffff !important;
   -webkit-background-clip: text;
   }
 
+  .grad-border{
+    border-color: #DA627D;
+    color: #9A348E;
+    
+  }
+  
+  .grad-border:hover{
+    background: radial-gradient(at right top, #DA627D, #9A348E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
   h1, h2, h3, h4, h5{
     font-family: "Tangerine", cursive;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }

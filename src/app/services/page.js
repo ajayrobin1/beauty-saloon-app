@@ -1,52 +1,11 @@
 import Card from "@/components/Card";
 import Hero from "@/components/Hero";
-import { db } from "@/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { getServices } from "@/functions/fetchData";
 
-// const services=[
-//   { 
-//     id:'1',
-//     title:'Mock data',
-//     iconPath: '/Bride',
-//   },
-//   { 
-//     id:'2',
-//     title:'Mock data',
-//     iconPath: '/FacialMask',
-//   },
-//   { 
-//     id:'3',
-//     title:'Mock data',
-//     iconPath: '/NailPolish',
-//   },
-//   { 
-//     id:'4',
-//     title:'Mock data',
-//     iconPath: '/FootMassage',
-//   },
-//   { 
-//     id:'5',
-//     title:'Mock data',
-//     iconPath: '/ManHair',
-//   },
-//   { 
-//     id:'6',
-//     title:'Mock data',
-//     iconPath: '/HairDye',
-//   }
-// ]
+export default async function Page() {
 
-export default async function Services() {
-  let services = [];
-  try {
-    const querySnapshot = await getDocs(collection(db, "services"));
-    querySnapshot.forEach((doc) => {
-    services.push({ id: doc.id, ...doc.data() });
-  });
+  const services = await getServices(8);
 
-  } catch (error) {
-    console.log(error)
-  }
     return ( 
       <>
         <Hero imgSrc={'https://images.pexels.com/photos/6954771/pexels-photo-6954771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}>
@@ -58,7 +17,7 @@ export default async function Services() {
             <div className="flex flex-col md:flex-row justify-center p-4 w-full md:w-5/6 md:mx-auto gap-y-6 md:gap-x-2 mb-4">
               {services.map((item, i) => {
                   return(
-                      <Card imgSrc={item.iconPath} title={item.title} key={i} id={i} />
+                      <Card iconPath={item.iconPath} title={item.title} key={i} id={item.id} path={item.path} />
                     )
                 })
             }

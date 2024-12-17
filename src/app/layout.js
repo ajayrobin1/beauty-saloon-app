@@ -43,9 +43,22 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${roboto.variable} ${tangerine.variable} ${merienda.var}  antialiased bg-gray-900`}
       >
-        <Navbar />
+      <Navbar />
         {children}
       <Footer/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1"
+        viewBox="0 0 512 512"
+        className="invisible w-0 h-0"
+      >
+        <defs>
+          <linearGradient id="grad5" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#DA627D" />
+            <stop offset="100%" stopColor="#9A348E" />
+          </linearGradient>
+        </defs>
+      </svg>
       </body>
     </html>
   );

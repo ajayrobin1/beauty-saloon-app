@@ -1,5 +1,5 @@
-import Card from "@/app/components/Card";
-import Hero from "@/app/components/Hero";
+import Card from "@/components/Card";
+import Hero from "@/components/Hero";
 import { db } from "@/firebase";
 import { collection, getDocs } from "firebase/firestore";
 

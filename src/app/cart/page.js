@@ -1,6 +1,6 @@
 "use client";
-import ContactForm from "@/app/components/ContactForm";
-import Hero from "@/app/components/Hero";
+import Card from "@/components/Card";
+import Hero from "@/components/Hero";
 
 export default function Page() {
     const cart = [];
@@ -25,7 +25,7 @@ export default function Page() {
 
     <div className="px-4 py-2 -mx-3">
         <div className="mx-3">
-            <span className="font-semibold text-yellow-400 dark:text-yellow-400">Warning</span>
+            <span className="font-semibold text-yellow-400 dark:text-yellow-400">Info</span>
             <p className="text-sm text-gray-600 dark:text-gray-600">
             Your cart is empty!
             </p>

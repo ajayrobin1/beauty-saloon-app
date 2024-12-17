@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Hero from "@/app/components/Hero";
+import Hero from "@/components/Hero";
 
 const imageList = [
   {imgSrc: 'https://images.unsplash.com/photo-1549570652-97324981a6fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHwy',

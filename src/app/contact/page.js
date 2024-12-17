@@ -1,6 +1,6 @@
 "use client";
-import ContactForm from "@/app/components/ContactForm";
-import Hero from "@/app/components/Hero";
+import ContactForm from "@/components/ContactForm";
+import Hero from "@/components/Hero";
 
 export default function Contact() {
     return ( 

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Hero from "./components/Hero";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import ContactForm from "./components/ContactForm";
+import Hero from "@/components/Hero";
+import Button from "@/components/Button";
+import Card from "@/components/Card";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const services=[

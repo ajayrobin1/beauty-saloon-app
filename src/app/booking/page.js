@@ -1,9 +1,9 @@
 "use client";
 import { use, useEffect, useState } from "react";
-import Button from "@/app/components/Button";
-import Hero from "@/app/components/Hero";
-import Input from "@/app/components/Input";
-import TextArea from "@/app/components/TextArea";
+import Button from "@/components/Button";
+import Hero from "@/components/Hero";
+import Input from "@/components/Input";
+import TextArea from "@/components/TextArea";
 import { db } from "@/firebase";
 
 import Select from "react-select";

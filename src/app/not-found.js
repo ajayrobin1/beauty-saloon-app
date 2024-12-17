@@ -1,5 +1,5 @@
-import BackButton from "@/app/components/BackButton";
-import Button from "@/app/components/Button";
+import BackButton from "@/components/BackButton";
+import Button from "@/components/Button";
 
 export default function Custom404() {
     return (<>

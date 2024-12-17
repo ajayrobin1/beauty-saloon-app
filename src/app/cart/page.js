@@ -3,7 +3,8 @@ import Card from "@/components/Card";
 import Hero from "@/components/Hero";
 
 export default function Page() {
-    const cart = [];
+  const cart =[];
+
     return ( 
       <>
       <Hero imgSrc={'https://images.unsplash.com/photo-1487412912498-0447578fcca8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}>
@@ -14,8 +15,16 @@ export default function Page() {
 
     <div className="bg-white p-6">
         {
-          cart.length === 0?
-
+          (cart.length !== 0)?
+            <div className="flex flex-col md:flex-row justify-center p-4 w-full md:w-5/6 md:mx-auto gap-y-6 md:gap-x-2 mb-4">
+            {cart.map((item, i) => {
+                return(
+                    <Card iconPath={item.iconPath} title={item.title} key={i} id={item.id} />
+                    )
+                })
+            }
+            </div>
+          :
             <div className="mx-auto flex w-full border border-gray-400 max-w-sm overflow-hidden bg-white rounded-sm dark:bg-gray-white">
     <div className="flex items-center justify-center w-12 bg-yellow-400">
         <svg className="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -32,16 +41,6 @@ export default function Page() {
         </div>
     </div>
 </div>
-          
-          :
-            <div className="flex flex-col md:flex-row justify-center p-4 w-full md:w-5/6 md:mx-auto gap-y-6 md:gap-x-2 mb-4">
-            {cart.map((item, i) => {
-                return(
-                    <Card imgSrc={item.iconPath} title={item.title} key={i} id={i} />
-                    )
-                })
-            }
-            </div>
         }
             </div>
       </>

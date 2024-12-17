@@ -63,15 +63,19 @@ color: #ffffff !important;
   }
 
   .grad-border{
-    border-color: #DA627D;
+    border-color: #9A348E;
     color: #9A348E;
-    
+    background: radial-gradient(at right top, #DA627D, #9A348E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: all ease-in-out;
+    transition-duration: 300ms;
   }
   
   .grad-border:hover{
     background: radial-gradient(at right top, #DA627D, #9A348E);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-text-fill-color: #f0f0f0;
+    color: #f0f0f0;
   }
 
   h1, h2, h3, h4, h5{
